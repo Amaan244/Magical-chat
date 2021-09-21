@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+
+    background: hsla(208, 33%, 21%, 1);
+
+    background: linear-gradient(90deg, hsla(208, 33%, 21%, 1) 0%, hsla(211, 36%, 46%, 1) 100%);
+
+    background: -moz-linear-gradient(90deg, hsla(208, 33%, 21%, 1) 0%, hsla(211, 36%, 46%, 1) 100%);
+
+    background: -webkit-linear-gradient(90deg, hsla(208, 33%, 21%, 1) 0%, hsla(211, 36%, 46%, 1) 100%);
+
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#243748", endColorstr="#4B749F", GradientType=1 );
+}
+body::before
+{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#ffcaa6,#f86594);
+  clip-path: circle(30% at 85% 100%);
+  z-index: -1;
+}
+body::after
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#2196f3,#e91e63);
+    clip-path: circle(20% at 10% 10%);
+    z-index: -1;
+}
+
+/* ---------------------SchrolBar---------------------- */
+::-webkit-scrollbar{
+    width: 7px;
+}
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 10px gainsboro;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1b7ced;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #104a8e; 
+  }
+
+
+
+
+/* ---------------------section---------------------- */
+section.chat__section{
+    width: 800px;
+    max-width: 90%;
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    border-radius: 25px;
+    
+}
+
+/*            ----------logo----------              */
+.brand{
+    padding: 20px;
+    /* background: #f1f1f1; */
+    display: flex;
+    align-items: center;
+    border-radius: 25px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background: hsla(186, 33%, 94%, 1);
+
+    background: linear-gradient(90deg, hsla(186, 33%, 94%, 1) 0%, hsla(216, 41%, 79%, 1) 100%);
+
+    background: -moz-linear-gradient(90deg, hsla(186, 33%, 94%, 1) 0%, hsla(216, 41%, 79%, 1) 100%);
+
+    background: -webkit-linear-gradient(90deg, hsla(186, 33%, 94%, 1) 0%, hsla(216, 41%, 79%, 1) 100%);
+
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#EBF4F5", endColorstr="#B5C6E0", GradientType=1 );
+}
+.brand h1{
+    text-transform: uppercase;
+    font-size: 22px;
+    color: #444;
+    margin-left: 10px;
+}
+
+.message__area{
+    height: 500px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    padding-top: 40px;
+}
+.textarea_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+textarea{
+    width: 99%;
+    border: none;
+    padding:20px;
+    font-size: 16px;
+    outline: none;
+    background: #fbfbfb;
+    border-radius: 25px;
+    margin-bottom: 5px;
+
+}
+
+.message{
+    padding: 20px;
+    border-radius: 4px;
+    margin-bottom: 40px;
+    max-width: 300px;
+    position: relative;
+}
+.incoming{
+    background: #8f8be8;
+    color: #fff;
+}
+.outgoing{
+    background: #e9eafd;
+    color: #787986;
+    margin-left: auto;
+}
+.message h4{
+    position: absolute;
+    top: -20px;
+    left: 0;
+    color: #333;
+    font-size: 14px;
+}
+.chat__section .brand img{
+    width: 100px;
+}
+
+div.user-join{
+    font-size: 0.9rem;
+    color: darkgray;
+    background-color: white;
+    border-radius: 50px;
+    width: max-content;
+    padding: 7px 20px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+
+
+/* ------------mobile------------ */
+
+@media only screen and (max-width: 600px) {
+    
+    section.chat__section{
+        height: 70vh;
+    }
+
+    .message__area{
+        height: 380px;
+
+    }
+
+}
